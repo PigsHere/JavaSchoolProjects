@@ -116,7 +116,7 @@ public class FastFoodBillingSystem {
                 }
 
                 for (int i = 0; i < userItems.size(); i++) {
-                    totalAmount += userItemPrice.get(i) * userItemQuantities.get(i);
+                    totalAmount = totalAmount + userItemPrice.get(i) * userItemQuantities.get(i);
                 }
 
                 // VAT PROMPT SECTION
@@ -127,7 +127,7 @@ public class FastFoodBillingSystem {
                 userVatStatus = myInput.nextLine();
 
                 if (userVatStatus.toUpperCase().equals("Y")) {
-                    totalAmount += totalAmount * vatPercent;
+                    totalAmount = totalAmount + totalAmount * vatPercent;
                     System.out.println("Your Total Amount With VAT but without Discount is " + totalAmount);
                 }
 
@@ -148,7 +148,7 @@ public class FastFoodBillingSystem {
 
                             discountPercent = Double.parseDouble(discountCoupons[i][1]);
                             discountAmount = totalAmount * (discountPercent / 100);
-                            totalAmount -= discountAmount;
+                            totalAmount = totalAmount - discountAmount;
 
                             userCouponCodeAuthenticity = true;
                             break;
