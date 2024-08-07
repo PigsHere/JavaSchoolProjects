@@ -142,7 +142,7 @@ public class FastFoodBillingSystem {
                     String userCouponCode = myInput.nextLine();
                     boolean userCouponCodeAuthenticity = false;
 
-                    for(int i = 0; i < discountCoupons.length; i++) {
+                    for (int i = 0; i < discountCoupons.length; i++) {
 
                         if (discountCoupons[i][0].equals(userCouponCode)) {
 
@@ -160,6 +160,7 @@ public class FastFoodBillingSystem {
                     }
 
                     System.out.println("Your total amount is " + totalAmount + " after a discount of " + discountAmount);
+                }
 
                     // USER PAYMENT SECTION
 
@@ -172,9 +173,7 @@ public class FastFoodBillingSystem {
                         if (userPayment < totalAmount) {
                             userDebt = totalAmount - userPayment;
                             System.out.println("That is Less Than What is to be Paid, You Still Have " + userDebt + " yet to Pay.");
-                        }
-
-                        else if (userPayment > totalAmount) {
+                        } else if (userPayment > totalAmount) {
 
                             // USER CHANGE CALCULATION IN HIGHEST NOTES SECTION
 
@@ -199,14 +198,11 @@ public class FastFoodBillingSystem {
 
                             System.out.println("Your Change is " + totalUserChange);
                             System.out.println("Thank You for Your Payment");
-                        }
-
-                        else {
+                        } else {
                             System.out.println("Thank You for Your Payment.");
                         }
 
                     }
-                }
             }
 
             else {
