@@ -190,9 +190,8 @@ public class FastFoodBillingSystem {
 
                                 if (userChange >= noteNumber) {
                                     double noteCount = userChange / noteNumber;
-                                    noteCount = (int) noteCount;
                                     userChange = userChange - noteCount * noteNumber;
-                                    System.out.println(noteCount + " Notes of " + noteNumber);
+                                    System.out.println((int)noteCount + " Notes of " + noteNumber);
                                 }
                             }
 
